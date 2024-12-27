@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Management Tool</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="header-bar">
+    <!-- Add any top bar content if needed -->
+     <h2>Office Hours: 9:00 AM - 5:30 PM | Bengaluru, Karnataka, India</h2>
+     </div>
+  <header class="main-header">
+    <h1>Zidio Task Manager</h1>
+  </header>
+
+    <!-- Task Adding Tool -->
+    <div class="card p-4 mb-4">
+      <h4>Add New Task</h4>
+      <form id="taskForm">
+        <div class="mb-3">
+          <label for="title" class="form-label">Title</label>
+          <input type="text" id="title" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label for="description" class="form-label">Description</label>
+          <textarea id="description" class="form-control" rows="3" required></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="assignedTo" class="form-label">Assigned To</label>
+          <input type="text" id="assignedTo" class="form-control">
+        </div>
+        <div class="mb-3">
+          <label for="priority" class="form-label">Priority</label>
+          <select id="priority" class="form-select">
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="deadline" class="form-label">Deadline</label>
+          <input type="date" id="deadline" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary">Add Task</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Task Columns -->
+  <div class="task-columns-container container-fluid mt-4 p-4">
+    <div class="row">
+      <!-- To Do Column -->
+      <div class="col-md-3">
+        <div class="card">
+          <div class="card-header bg-primary text-white">
+            To Do
+          </div>
+          <div class="card-body" id="toDoList">
+            <!-- Tasks will appear here -->
+          </div>
+        </div>
+      </div>
+
+      <!-- In Progress Column -->
+      <div class="col-md-3">
+        <div class="card">
+          <div class="card-header bg-warning text-dark">
+            In Progress
+          </div>
+          <div class="card-body" id="inProgressList">
+            <!-- Tasks will appear here -->
+          </div>
+        </div>
+      </div>
+
+      <!-- In Review Column -->
+      <div class="col-md-3">
+        <div class="card">
+          <div class="card-header bg-danger text-white">
+            In Review
+          </div>
+          <div class="card-body" id="inReviewList">
+            <!-- Tasks will appear here -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Completed Column -->
+      <div class="col-md-3">
+        <div class="card">
+          <div class="card-header bg-success text-white">
+            Completed
+          </div>
+          <div class="card-body" id="completedList">
+            <!-- Tasks will appear here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
